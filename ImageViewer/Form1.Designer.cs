@@ -28,64 +28,58 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.btnLoadImage = new System.Windows.Forms.Button();
 			this.dlgFileDialog = new System.Windows.Forms.OpenFileDialog();
-			this.txtImagePath = new System.Windows.Forms.TextBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.pbxImage = new System.Windows.Forms.PictureBox();
+			this.lblMessage = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.pbxImage)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// btnLoadImage
-			// 
-			this.btnLoadImage.Location = new System.Drawing.Point(350, 326);
-			this.btnLoadImage.Name = "btnLoadImage";
-			this.btnLoadImage.Size = new System.Drawing.Size(75, 23);
-			this.btnLoadImage.TabIndex = 0;
-			this.btnLoadImage.Text = "Load";
-			this.btnLoadImage.UseVisualStyleBackColor = true;
 			// 
 			// dlgFileDialog
 			// 
-			this.dlgFileDialog.FileName = "openFileDialog1";
 			this.dlgFileDialog.Filter = "PNG|*.png";
 			// 
-			// txtImagePath
+			// pbxImage
 			// 
-			this.txtImagePath.Location = new System.Drawing.Point(13, 326);
-			this.txtImagePath.Name = "txtImagePath";
-			this.txtImagePath.Size = new System.Drawing.Size(331, 20);
-			this.txtImagePath.TabIndex = 1;
+			this.pbxImage.Location = new System.Drawing.Point(2, 2);
+			this.pbxImage.Name = "pbxImage";
+			this.pbxImage.Size = new System.Drawing.Size(410, 307);
+			this.pbxImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pbxImage.TabIndex = 2;
+			this.pbxImage.TabStop = false;
+			this.pbxImage.DoubleClick += new System.EventHandler(this.pbxImage_DoubleClick);
 			// 
-			// pictureBox1
+			// lblMessage
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(410, 307);
-			this.pictureBox1.TabIndex = 2;
-			this.pictureBox1.TabStop = false;
+			this.lblMessage.AutoSize = true;
+			this.lblMessage.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblMessage.ForeColor = System.Drawing.Color.OrangeRed;
+			this.lblMessage.Location = new System.Drawing.Point(12, 9);
+			this.lblMessage.Name = "lblMessage";
+			this.lblMessage.Size = new System.Drawing.Size(118, 13);
+			this.lblMessage.TabIndex = 3;
+			this.lblMessage.Text = "Double-click to open.";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(435, 367);
-			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.txtImagePath);
-			this.Controls.Add(this.btnLoadImage);
+			this.AutoSize = true;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.ClientSize = new System.Drawing.Size(414, 311);
+			this.Controls.Add(this.lblMessage);
+			this.Controls.Add(this.pbxImage);
 			this.Name = "Form1";
 			this.Text = "Form1";
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pbxImage)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button btnLoadImage;
 		private System.Windows.Forms.OpenFileDialog dlgFileDialog;
-		private System.Windows.Forms.TextBox txtImagePath;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pbxImage;
+		private System.Windows.Forms.Label lblMessage;
 	}
 }
 
